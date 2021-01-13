@@ -1,0 +1,66 @@
+.modal{
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(255,216,14,0.5); 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContents{
+    background: white;
+    width: 90%;
+    max-width: 350px;
+    max-height: 60%;
+    border-radius: 8px;
+    padding: 12px;
+    padding-top: 10px;
+    display:flex;
+    flex-flow: column nowrap;
+    overflow-y: hidden;
+}
+
+.modalTitle{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    flex-shrink: 0;
+    margin-bottom: 8px;
+}
+
+.modal h3{
+    margin-bottom: 10px;
+}
+
+/* Arena Modal */
+
+.arenaChannel {
+    margin-top: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.arenaChannel > input{
+    flex-grow: 1;
+    border:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-family: 'DM Sans';
+    color: var(--dark-content);
+    font-size: 14px;
+    padding: 0 6px;
+    height: 26px;
+    border: 2px solid var(--light-content);
+    margin-right: 6px;
+}
+
+.arenaChannel > input:focus{
+    outline: 2px solid var(--main-accent);
+}
+
