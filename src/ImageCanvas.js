@@ -12,7 +12,7 @@ function ImageCanvas({imgSrc, updateRef, id, innerRef, draggableProps, dragHandl
     useEffect(() =>{
         if(!didMount.current){
             var img = new Image();
-            img.crossOrigin = "anonymous";
+            img.crossOrigin = "Anonymous";
             const canvas = canvasRef.current;
             const ctx = canvas.getContext('2d');
              img.onload = function(){
