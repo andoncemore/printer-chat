@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/printer-chat/static/css/main.2b795921.chunk.css",
-    "main.js": "/printer-chat/static/js/main.5574e5f8.chunk.js",
-    "main.js.map": "/printer-chat/static/js/main.5574e5f8.chunk.js.map",
+    "main.js": "/printer-chat/static/js/main.26aeedb5.chunk.js",
+    "main.js.map": "/printer-chat/static/js/main.26aeedb5.chunk.js.map",
     "runtime-main.js": "/printer-chat/static/js/runtime-main.3074afb8.js",
     "runtime-main.js.map": "/printer-chat/static/js/runtime-main.3074afb8.js.map",
     "static/js/2.a62eed67.chunk.js": "/printer-chat/static/js/2.a62eed67.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.3074afb8.js",
     "static/js/2.a62eed67.chunk.js",
     "static/css/main.2b795921.chunk.css",
-    "static/js/main.5574e5f8.chunk.js"
+    "static/js/main.26aeedb5.chunk.js"
   ]
 }
