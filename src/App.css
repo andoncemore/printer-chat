@@ -1,0 +1,352 @@
+/* Button */
+
+button, .filebtn{
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  outline: none;
+  border: none;
+
+  background: white;
+  border: 2px solid var(--light-content);
+  color: var(--light-content);
+  border-radius: 3px;
+  padding: 0.25em 0.75em;
+  font-weight: bold;
+  font-size: 0.875em;
+  transition: background 100ms ease, color 100ms ease;
+}
+
+button:enabled:hover, .filebtn:hover{
+  background: var(--main-accent);
+  border: 2px solid var(--main-accent);
+  color: white;
+}
+
+button:enabled:active, .filebtn:active{
+  transform: scale(0.95);
+}
+
+button:disabled{
+  opacity:0.8;
+  background: var(--disabled);
+  color: var(--light-content);
+  border: 2px solid var(--disabled);
+}
+
+.filebtn > input{
+  display: none;
+}
+
+button > svg{
+  width: 24px;
+}
+
+button:disabled > svg{
+  fill: var(--light-content);
+}
+
+button:enabled:hover > svg{
+  fill: white;
+}
+
+/* Toggle */
+
+.toggle{
+  display:flex;
+  align-items:center;
+}
+
+.toggle > input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 32px;
+  height: 18px;
+  display: inline-block;
+  position: relative;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: var(--dark-content);
+  transition: background color ease 0.3s;
+  margin-right: 4px;
+}
+
+.toggle > input:before{
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: all cubic-bezier(0.3,1.5,0.7,1) 0.3s;
+}
+
+.toggle > input:checked{
+  background-color: var(--main-accent);
+}
+
+.toggle > input:checked:before{
+  left: 16px;
+}
+
+.toggle > label{
+  color: var(--dark-content);
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.toggle > input:checked + label{
+  color: var(--main-accent);
+}
+
+/* Slider */
+
+.slider{
+  display: flex;
+  align-items: center;
+}
+
+input[type=range]{
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus{
+  outline: none;
+}
+
+input[type=range]::ms-track{
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.slider input[type=range]{
+  width: 120px;
+}
+
+.slider input[type=range]::-webkit-slider-thumb{
+  background: var(--main-accent);
+  height: 14px;
+  width:14px;
+  border-radius: 7px;
+  padding-bottom: 10px;
+  transform: translateY(-5px);
+}
+
+.slider input[type=range]::moz-range-thumb{
+  background: var(--main-accent);
+  height: 14px;
+  width:14px;
+  border-radius: 7px;
+}
+
+.slider input[type=range]::-ms-thumb {
+  background: var(--main-accent);
+  height: 14px;
+  width:14px;
+  border-radius: 7px;
+}
+
+.slider input[type=range]::-webkit-slider-runnable-track{
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: var(--disabled);
+  border-radius: 8px;
+}
+
+.slider > label{
+  margin-right: 6px;
+}
+
+/* Toggle Buttons */
+
+.toggleButton{
+  border-radius: 14px;
+  background: rgba(255,255,255,1);
+  padding: 4px;
+  margin: 4px 4px 2px 4px;
+}
+
+.toggleButton > input{
+  display: none;
+}
+
+.toggleButton > svg{
+  display: block;
+  width:20px;
+  fill: var(--dark-content);
+  transition: fill 100ms ease, transform 100ms ease;
+}
+.toggleButton:hover > svg{
+  fill: var(--main-accent);
+}
+
+.toggleButton > input:checked + svg{
+  fill: var(--main-accent);
+}
+
+.toggleButton > input:active + svg{
+  transform: scale(0.9);
+}
+
+/* Icon Buttons */
+
+button.iconButton{
+  background: white;
+  border-radius: 14px;
+  padding: 4px;
+  margin: 4px 4px 2px 4px;
+  border: none;
+}
+
+button.iconButton:hover{
+  background: white;
+  border: none;
+}
+
+button.iconButton:active{
+  transform: unset;
+}
+
+button.iconButton > svg{
+  display:block;
+  width: 20px;
+  fill: var(--dark-content);
+  transition: fill 100ms ease, transform 100ms ease;
+}
+
+button.iconButton:active > svg{
+  transform: scale(0.9); 
+}
+
+button.iconButton:hover > svg{
+  fill: var(--main-accent);
+}
+
+
+.App {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.App > div{
+  margin-bottom: 1em;
+}
+
+.Options{
+  position: sticky;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.Options > *{
+  margin-right: 8px;
+}
+
+.App h1{
+  font-weight: bold;
+  font-size: 1.5em;
+  color: var(--dark-content);
+}
+
+.App p{
+  color: var(--light-content);
+}
+
+.App mark{
+  background: var(--highlight);
+  padding: 0 0.2em;
+}
+
+.Contents{
+  display:flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+
+.Contents > canvas{
+  display:block;
+}
+
+.Contents > button{
+  margin-top: 1em;
+}
+
+.printOptions{
+  margin-top: 20px;
+}
+
+.printOptions > *{
+  margin-right: 8px;
+}
+
+.printOptions .errorMessage{
+  color: var(--main-accent);
+  font-size: 0.875em;
+  font-style: italic;
+}
+
+.imageoptions{
+  width: 100%;
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background:white;
+}
+
+.overlayButtons{
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.upload{
+  display:flex;
+  flex-flow: column nowrap;
+}
+
+@media (hover: hover){
+  .upload:hover .canvas .toggleButton,
+  .upload:hover .canvas button.iconButton{
+    opacity:0.85;
+    transform: scale(1);
+  }
+
+  .upload .canvas .toggleButton,
+  .upload .canvas button.iconButton{
+    opacity:0;
+    transform: scale(0.5);
+    transition: opacity 250ms ease, transform 400ms ease;
+  }
+
+}
+
+
+
+
+
+.canvas{
+  position:relative;
+}
